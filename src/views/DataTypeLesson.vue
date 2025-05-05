@@ -13,7 +13,7 @@
   <script>
   import axios from 'axios'
   import SideBar from '../components/SideBar.vue';
-  import MarkdownIt from 'markdown-it'
+ 
   export default {
   methods:{
     changelesson(index){
