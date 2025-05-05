@@ -22,7 +22,7 @@
     },
     async fetchLesson() {
     try {
-      const response = await axios.get(`codegames-backend-production.up.railway.app/datatype/lessons/${this.lessonId}`)
+      const response = await axios.get(`http://localhost:8000/datatype/lessons/${this.lessonId}`)
       this.lesson = response.data
       const username = localStorage.getItem("username")
       if(username){
