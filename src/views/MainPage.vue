@@ -1,6 +1,6 @@
 <template>
   <NavBar/>
-    <img src="D:\Web project\code-games\src\assets\codegameslogo.png" class ="logo">
+    <img src="..\assets\codegameslogo.png" class ="logo">
     <p>Code games is an online learning platform intended to teach you the</p>
     <p>fundamentals of programming and coding with puzzles and challenges</p>
     <p>         Challeng yourself today!!!!</p>
@@ -9,11 +9,12 @@
     <p v-else>Good Luck {{ username }}!!!</p>
    
 
+
 </template>
 
 <script>
 
-import NavBar from './components/NavBar.vue';
+import NavBar from '../components/NavBar.vue';
 
 
 export default {

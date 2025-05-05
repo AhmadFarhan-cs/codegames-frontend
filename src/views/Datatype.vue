@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios';
-import SideBar from './components/SideBar.vue';
+import SideBar from '../components/SideBar.vue';
     
 export default{
     
