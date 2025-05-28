@@ -2,10 +2,10 @@
     <SideBar/>
     <h2>Select one of the modules below to get started </h2>
     <button @click="goto('datatype')" class="module">Data types</button>
-    <button class="module">Instruction flow</button>
+    <button @click="goto('controlflow')" class="module">Control flow</button>
     <br>
     <button class="module">Controlling loops</button>
-    <button class="module">Data Structures</button>
+    <button @click="goto('datastructures')" class="module">Data Structures</button>
 </template>
 
 <script>
@@ -19,6 +19,15 @@ export default{
   goto(page) {
     if (page === "datatype"){
     this.$router.push("/datatype")}
+    else if (page === "controlflow"){
+      this.$router.push("/controlflow")
+    }
+    else if (page === "loops"){
+      this.$router.push("/loops")
+    }
+    else if (page === "datastructures"){
+      this.$router.push("/datastructures")
+    }
   }
 }
 

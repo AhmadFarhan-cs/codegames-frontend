@@ -1,14 +1,14 @@
 <template>
     <SideBar></SideBar>
     <div>
-      <h2>Data Type Lesson #{{ lessonId }}</h2>
+      <h2>Control Flow Lesson #{{ lessonId }}</h2>
       <h2 v-if="lesson">{{ lesson.title }}</h2>
       <div v-html="renderedContent" class="mainbody"></div>
     </div>
 
-    <button v-if="lessonId !=5" @click="changelesson(1)" class="next">Next</button>
+    <button v-if="lessonId !=7" @click="changelesson(1)" class="next">Next</button>
     <button v-if="lessonId !=1" @click="changelesson(-1)" class="prev">Previous</button>
-    <button class="home" ><router-link to="/datatype" style="color: white;">&larr;</router-link></button>
+    <button class="home" ><router-link to="/controlflow" style="color: white;">&larr;</router-link></button>
   </template>
   
   <script>
@@ -19,13 +19,13 @@
   methods:{
     changelesson(index){
      const nextpage = parseInt( this.lessonId)  + index
-     this.$router.push(`/datatype/lessons/${nextpage}`)
+     this.$router.push(`/controlflow/lessons/${nextpage}`)
     },
     async fetchLesson() {
     try {
       const response = await axios.get(`http://localhost:8000/lessons/${this.lessonId}`, {
         params: {
-          module: "datatype"
+          module: "controlflow"
         }
       })
       this.lesson = response.data
@@ -34,7 +34,8 @@
         const userData = new FormData()
         userData.append('username', username)
         userData.append('lessonid' ,this.lessonId)
-        userData.append('module' , "datatype")
+        userData.append('module' , "controlflow")
+
         const lessonupdate = await axios.post("http://localhost:8000/lessons",userData)}
 
     } catch (error) {

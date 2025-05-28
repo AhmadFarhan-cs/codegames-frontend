@@ -1,7 +1,7 @@
 <template>
     <SideBar></SideBar>
-    <h2>Data types are one of the fundamental building blocks of programming </h2>
-    <h2>Mastering data types leads alows you manipulate information in ways you have never could have imagined </h2>
+    <h2>Data is exteremly valuable which means thats storing and accessing data is also highy important </h2>
+    <h2>This is where data Structures come in mastery of which allows you to handle data in ways not before possible </h2>
     <div>
     <h3>Lessons</h3>
     <button v-for="(lesson,index) in lessons" :key="index" class="nodes" @click="gotolesson(lesson.id)" :style="{ color: lesson.read == true ? 'green' : 'white' }">{{ lesson.id }}</button>
@@ -27,7 +27,7 @@ export default{
         return{
             lessons:[
 
-                {id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false},{id:5,read:false}
+                {id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false},{id:5,read:false},{id: 6,read:false},{id: 7 ,read:false}
             ],
             exercies:[{id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false}]
 
@@ -35,10 +35,10 @@ export default{
     },
     methods:{
         gotolesson(page){
-            this.$router.push(`/datatype/lessons/${page}`)
+            this.$router.push(`/datastructures/lessons/${page}`)
         },
         gotoexercise(page){
-            this.$router.push(`/datatype/exercise${page}`)
+            this.$router.push(`/datastructures/exercise${page}`)
         }
         
     },
@@ -49,7 +49,7 @@ export default{
       const response = await axios.get("http://localhost:8000/hasread", {
         params: {
           username: username,
-          module: "datatype"
+          module: "controlflow"
         }
       });
 

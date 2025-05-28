@@ -1,7 +1,7 @@
 <template>
     <SideBar></SideBar>
-    <h2>Data types are one of the fundamental building blocks of programming </h2>
-    <h2>Mastering data types leads alows you manipulate information in ways you have never could have imagined </h2>
+    <h2>Programming is all about giving instructions, But instructions are meaningless unless sequenced correctly </h2>
+    <h2>Thats where Control Flow comes mastery of which will allow you to properly construct instruction sequences thats can adapt if needed </h2>
     <div>
     <h3>Lessons</h3>
     <button v-for="(lesson,index) in lessons" :key="index" class="nodes" @click="gotolesson(lesson.id)" :style="{ color: lesson.read == true ? 'green' : 'white' }">{{ lesson.id }}</button>
@@ -27,18 +27,18 @@ export default{
         return{
             lessons:[
 
-                {id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false},{id:5,read:false}
+                {id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false},{id:5,read:false},{id: 6,read:false},{id: 7 ,read:false}
             ],
-            exercies:[{id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false},{id: 4,read:false}]
+            exercies:[{id: 1, read: false},{id : 2,read:false},{id: 3 ,read:false}]
 
         }
     },
     methods:{
         gotolesson(page){
-            this.$router.push(`/datatype/lessons/${page}`)
+            this.$router.push(`/controlflow/lessons/${page}`)
         },
         gotoexercise(page){
-            this.$router.push(`/datatype/exercise${page}`)
+            this.$router.push(`/controlflow/exercise${page}`)
         }
         
     },
@@ -49,7 +49,7 @@ export default{
       const response = await axios.get("http://localhost:8000/hasread", {
         params: {
           username: username,
-          module: "datatype"
+          module: "controlflow"
         }
       });
 
