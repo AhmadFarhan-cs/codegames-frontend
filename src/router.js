@@ -17,7 +17,7 @@ import ControlFlowExercise2 from './views/ControlFlowExercises/ControlFlowExerci
 import ControlFlowExercise3 from './views/ControlFlowExercises/ControlFlowExercise3.vue'
 import DataStructures from './views/DataStructures.vue'
 import DataStructuresLesson from './views/DataStructuresLesson.vue'
-import DataStructureExercise2 from './views/DataStructuresexercises/DataStructureExercise2.vue'
+import DataStructureExercise2 from './views/DataStructuressexercises/DataStructureExercise2.vue'
 import DataStructureExercise3 from './views/DataStructuresexercises/DataStructureExercise3.vue'
 import DataStructureExercise4 from './views/DataStructuresexercises/DataStructureExercise4.vue'
 const routes = [
