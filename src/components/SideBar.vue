@@ -28,6 +28,16 @@
                 <router-link to="/controlflow/lessons/6" class="nav-item">Lesson 6</router-link>
                 <router-link to="/controlflow/lessons/7" class="nav-item">Lesson 7</router-link>
               </div>
+              <p @click="toggleMenu('datastructureLesson')">Data Structures ▾</p>
+              <div v-if="expanded.datastructureLesson" class="nested">
+                <router-link to="/datastructures/lessons/1" class="nav-item">Lesson 1</router-link>
+                <router-link to="/datastructures/lessons/2" class="nav-item">Lesson 2</router-link>
+                <router-link to="/datastructures/lessons/3" class="nav-item">Lesson 3</router-link>
+                <router-link to="/datastructures/lessons/4" class="nav-item">Lesson 4</router-link>
+                <router-link to="/datastructures/lessons/5" class="nav-item">Lesson 5</router-link>
+                <router-link to="/datastructures/lessons/6" class="nav-item">Lesson 6</router-link>
+                <router-link to="/datastructures/lessons/7" class="nav-item">Lesson 7</router-link>
+              </div>
             </div>
             <p @click="toggleMenu('exercise')" class="nav-header">Exercises ▾</p>
             <div v-if="expanded.exercise" class="nested">
@@ -43,6 +53,13 @@
                 <router-link to="/controlflow/exercise1" class="nav-item">Exercise 1</router-link>
                 <router-link to="/controlflow/exercise2" class="nav-item">Exercise 2</router-link>
                 <router-link to="/controlflow/exercise3" class="nav-item">Exercise 3</router-link>
+              </div>
+              <p @click="toggleMenu('datastructureExercise')" class="nav-header">Data Structures ▾</p>
+              <div v-if="expanded.datastructureExercise" class="nested">
+                <router-link to="/datastructures/exercise1" class="nav-item">Exercise 1</router-link>
+                <router-link to="/datastructures/exercise2" class="nav-item">Exercise 2</router-link>
+                <router-link to="/datastructures/exercise3" class="nav-item">Exercise 3</router-link>
+                <router-link to="/datastructures/exercise4" class="nav-item">Exercise 4</router-link>
               </div>
             </div>
           </div>
@@ -76,7 +93,10 @@
           datatypeLesson: false,
           datatypeExercise: false,
           controlflowLesson: false,
-          controlflowExercise: false
+          controlflowExercise: false, 
+
+          datastructureLesson: false,
+          datastructureExercise: false
         },
         username:null
       }
