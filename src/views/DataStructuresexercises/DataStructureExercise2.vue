@@ -13,7 +13,7 @@
         >
           {{ item }}
         </div>
-      </div>
+      </div>``
       <div class="controls">
         <button @click="pushItem(index)">push</button>
         <button @click="popItem(index)">pop</button>

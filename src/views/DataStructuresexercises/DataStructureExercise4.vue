@@ -30,7 +30,7 @@
 </div>
   </div>
 
-  <button class="prev"><router-link to="/datastructures/exercise2" style="color: white;">Previous</router-link></button>
+  <button class="prev"><router-link to="/datastructures/exercise3" style="color: white;">Previous</router-link></button>
   <button class="home"><router-link to="/datastructures" style="color: white;">&larr;</router-link></button>
 </template>
 
