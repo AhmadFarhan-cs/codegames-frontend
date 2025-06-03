@@ -1,6 +1,7 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar" v-if="sidebarVisible">
       <div class="sidebar-top">
+        <button @click="toggleSidebar()" class="close-button">X</button>
         <h2 class="logo"><router-link to="/" class="nav-item">Code Games</router-link></h2>
       </div>
   
@@ -79,12 +80,16 @@
         </div>
       </div>
     </div>
+    <div class="sidebar-toggle" @click="toggleSidebar" v-if="!sidebarVisible">
+      <button>☰</button>
+    </div>
   </template>
   
   <script>
   export default {
     data() {
       return {
+        sidebarVisible: true,
         expanded: {
           learn: false,
           account: false,
@@ -113,6 +118,10 @@
       },
       goToprofile(){
         this.$router.push('/profile')
+      }
+      ,
+      toggleSidebar() {
+        this.sidebarVisible = !this.sidebarVisible
       }
     },
     mounted(){
@@ -193,5 +202,17 @@
 
 .nested .nav-item {
   padding-left: 1.5rem;
+}
+.sidebar-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: #111;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
 }
   </style>
